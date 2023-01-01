@@ -1,9 +1,19 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  let value = false;
+  //loop though using n element to compare to another loop of (n+1)
+  for(let i = 0; i<array.length; i++){
+    for(let j = 0; j<array.length; j++){
+      if( (i != j) )
+        if (array[i] + array[j] === target)
+          value = true;
+    }
+  }
+  return value;
 }
 
 /* 
   Write the Big O time complexity of your function here
+  // 0(n^2)
 */
 
 /* 
